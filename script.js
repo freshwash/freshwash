@@ -1,7 +1,8 @@
 const serviceData = {
   bins: {
-    icon: '🗑️',
+    iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>',
     iconBg: '#fef3c7',
+    iconColor: '#d97706',
     title: 'Bins Cleaning',
     desc: "Nobody wants to deal with a smelly, grimy bin — that's where we come in. We pressure wash the interior and exterior of your trash and recycling bins, killing bacteria, removing built-up residue, and eliminating odors. We use eco-friendly, biodegradable cleaning agents that are safe for your family, pets, and the environment. Service is available on a one-time or recurring basis.",
     stars: '★★★★★',
@@ -9,8 +10,9 @@ const serviceData = {
     author: '— Jamie R., Homeowner'
   },
   patio: {
-    icon: '🪨',
+    iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>',
     iconBg: '#dbeafe',
+    iconColor: '#1a6bff',
     title: 'Patio Cleaning',
     desc: "Over time, patios collect dirt, algae, moss, and stains that make them look years older than they are. We use professional-grade pressure washing calibrated for your surface — whether it's concrete, pavers, brick, flagstone, or composite decking. We pre-treat tough stains and seal edges carefully so your landscaping stays untouched. The result is a patio that looks freshly poured.",
     stars: '★★★★★',
@@ -18,8 +20,9 @@ const serviceData = {
     author: '— Marcus T., Homeowner'
   },
   siding: {
-    icon: '🏠',
+    iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
     iconBg: '#d1fae5',
+    iconColor: '#059669',
     title: 'Siding Cleaning',
     desc: "Dirty siding doesn't just look bad — it can actually damage your home over time. Mold, mildew, and algae eat away at surfaces and hurt curb appeal. We use a soft wash system (low pressure + professional cleaning solution) that safely removes buildup from vinyl, wood, fiber cement, stucco, and brick without the risk of high-pressure damage.",
     stars: '★★★★★',
@@ -30,8 +33,10 @@ const serviceData = {
 
 function openModal(service) {
   const d = serviceData[service];
-  document.getElementById('modalIcon').textContent = d.icon;
-  document.getElementById('modalIcon').style.background = d.iconBg;
+  const iconEl = document.getElementById('modalIcon');
+  iconEl.innerHTML = d.iconSvg;
+  iconEl.style.background = d.iconBg;
+  iconEl.style.color = d.iconColor;
   document.getElementById('modalTitle').textContent = d.title;
   document.getElementById('modalDesc').textContent = d.desc;
   document.getElementById('modalStars').textContent = d.stars;
@@ -68,7 +73,7 @@ function copyScript(btn) {
     btn.textContent = '✓ Copied!';
     setTimeout(() => {
       btn.classList.remove('copied');
-      btn.textContent = '📋 Copy';
+      btn.textContent = 'Copy';
     }, 2000);
   });
 }

@@ -179,9 +179,10 @@ nav {
   display: flex; align-items: center; justify-content: center;
   font-size: 1.5rem; margin-bottom: 20px;
 }
-.service-card:nth-child(1) .service-icon { background: #fef3c7; }
-.service-card:nth-child(2) .service-icon { background: #dbeafe; }
-.service-card:nth-child(3) .service-icon { background: #d1fae5; }
+.service-card:nth-child(1) .service-icon { background: #fef3c7; color: #d97706; }
+.service-card:nth-child(2) .service-icon { background: #dbeafe; color: #1a6bff; }
+.service-card:nth-child(3) .service-icon { background: #d1fae5; color: #059669; }
+.service-icon svg, .modal-icon svg { width: 24px; height: 24px; display: block; }
 .service-card h3 {
   font-family: 'Outfit', sans-serif;
   font-weight: 700; font-size: 1.2rem; margin-bottom: 8px;
