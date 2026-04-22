@@ -8,8 +8,8 @@ const serviceData = {
     stars: '★★★★★',
     review: '"I didn\'t realize how bad my bins smelled until Fresh Wash cleaned them. Night and day difference. Signed up for monthly right away."',
     author: '— Jamie R., Homeowner',
-    beforeImg: 'https://placehold.co/360x200/e2e5eb/8b93a3?text=Before',
-    afterImg:  'https://placehold.co/360x200/e6faf4/059669?text=After'
+    beforeImg: 'imgs/bin_before.jpg',
+    afterImg:  'imgs/bin_after.jpg'
   },
   patio: {
     iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>',
@@ -20,8 +20,8 @@ const serviceData = {
     stars: '★★★★★',
     review: '"Our patio went from embarrassing to the best part of our backyard. Neighbors have already asked for their number."',
     author: '— Marcus T., Homeowner',
-    beforeImg: 'https://placehold.co/360x200/e2e5eb/8b93a3?text=Before',
-    afterImg:  'https://placehold.co/360x200/e6faf4/059669?text=After'
+    beforeImg: 'imgs/patio_before.jpg',
+    afterImg:  'imgs/patio_after.jpg'
   },
   siding: {
     iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
@@ -32,8 +32,8 @@ const serviceData = {
     stars: '★★★★★',
     review: '"Honestly thought we needed to repaint. Turns out we just needed a wash. House looks 10 years younger. These guys are legit."',
     author: '— Dana K., Homeowner',
-    beforeImg: 'https://placehold.co/360x200/e2e5eb/8b93a3?text=Before',
-    afterImg:  'https://placehold.co/360x200/e6faf4/059669?text=After'
+    beforeImg: 'imgs/siding_before.jpg',
+    afterImg:  'imgs/siding_after.jpg'
   }
 };
 
