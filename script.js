@@ -7,7 +7,7 @@ const serviceData = {
     desc: "Nobody wants to deal with a smelly, grimy bin — that's where we come in. We pressure wash the interior and exterior of your trash and recycling bins, killing bacteria, removing built-up residue, and eliminating odors. Available as a one-time clean or on a recurring schedule.",
     stars: '★★★★★',
     review: '"I didn\'t realize how bad my bins smelled until Fresh Wash cleaned them. Night and day difference. Signed up for monthly right away."',
-    author: '— Jamie R., Homeowner',
+    author: '— Susan, Homeowner',
     beforeImg: 'imgs/bin_before.jpg',
     afterImg:  'imgs/bin_after.jpg'
   },
@@ -19,7 +19,7 @@ const serviceData = {
     desc: "Over time, patios collect dirt, algae, moss, and stains that make them look years older than they are. We use professional-grade pressure washing calibrated for your surface — whether it's concrete, pavers, brick, flagstone, or composite decking. We pre-treat tough stains and seal edges carefully so your landscaping stays untouched. The result is a patio that looks freshly poured.",
     stars: '★★★★★',
     review: '"Our patio went from embarrassing to the best part of our backyard. Neighbors have already asked for their number."',
-    author: '— Marcus T., Homeowner',
+    author: '— Anonymous, Homeowner',
     beforeImg: 'imgs/patio_before.jpg',
     afterImg:  'imgs/patio_after.jpg'
   },
@@ -31,7 +31,7 @@ const serviceData = {
     desc: "Dirty siding doesn't just look bad — it can actually damage your home over time. Mold, mildew, and algae eat away at surfaces and hurt curb appeal. We use a soft wash system (low pressure + professional cleaning solution) that safely removes buildup from vinyl, wood, fiber cement, stucco, and brick without the risk of high-pressure damage.",
     stars: '★★★★★',
     review: '"Honestly thought we needed to repaint. Turns out we just needed a wash. House looks 10 years younger. These guys are legit."',
-    author: '— Dana K., Homeowner',
+    author: '— Laura, Homeowner',
     beforeImg: 'imgs/siding_before.jpg',
     afterImg:  'imgs/siding_after.jpg'
   }
@@ -61,8 +61,22 @@ function closeModal(e) {
 }
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeModal();
+  }
 });
+
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
 function toggleFaq(item) {
   const wasOpen = item.classList.contains('open');

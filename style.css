@@ -273,8 +273,10 @@ nav {
 }
 .beforeafter-item img {
   width: 100%; display: block;
-  aspect-ratio: 16 / 10; object-fit: cover;
+  height: 200px; object-fit: cover;
+  cursor: zoom-in; transition: opacity 0.2s;
 }
+.beforeafter-item img:hover { opacity: 0.88; }
 .beforeafter-label {
   position: absolute; top: 8px; left: 8px;
   background: rgba(0,0,0,0.55); color: #fff;
@@ -282,6 +284,29 @@ nav {
   padding: 3px 10px; border-radius: 100px;
   text-transform: uppercase; letter-spacing: 0.5px;
 }
+
+/* lightbox */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.92); backdrop-filter: blur(10px);
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lightbox.open { display: flex; animation: fadeDown 0.2s ease; }
+.lightbox img {
+  max-width: 92vw; max-height: 92vh;
+  object-fit: contain; border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  cursor: default;
+}
+.lightbox-close {
+  position: absolute; top: 20px; right: 20px;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: none; background: rgba(255,255,255,0.15);
+  color: #fff; font-size: 1.3rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.28); }
 
 .modal-review {
   background: var(--gray-100); border-radius: 12px;

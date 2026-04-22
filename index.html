@@ -243,6 +243,12 @@
   </div>
 </footer>
 
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightboxImg" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
 <!-- modules -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" onclick="event.stopPropagation()">
@@ -252,11 +258,11 @@
     <p class="modal-desc" id="modalDesc"></p>
     <div class="modal-beforeafter">
       <div class="beforeafter-item">
-        <img id="modalBefore" src="" alt="Before cleaning">
+        <img id="modalBefore" src="" alt="Before cleaning" onclick="openLightbox(this.src)">
         <span class="beforeafter-label">Before</span>
       </div>
       <div class="beforeafter-item">
-        <img id="modalAfter" src="" alt="After cleaning">
+        <img id="modalAfter" src="" alt="After cleaning" onclick="openLightbox(this.src)">
         <span class="beforeafter-label">After</span>
       </div>
     </div>
